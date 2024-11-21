@@ -11,9 +11,9 @@ class SplashScreen extends StatelessWidget {
       Navigator.pushReplacementNamed(context, '/locations');
     });
     
-    return const Scaffold(
+    return  Scaffold(
       body: Center(
-        child: FlutterLogo(size: 100,),
+        child: Image.asset('assets/images/tcs_logo.png')
       ),
     );
   }
