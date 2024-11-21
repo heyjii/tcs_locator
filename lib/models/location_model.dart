@@ -21,14 +21,23 @@ class Location {
 
   factory Location.fromJson(Map<String, dynamic> json) {
     return Location(
-      centerName: json['location'],
-      location: json['geo'],
-      area: json['area'],
-      phone: json['phone'],
-      email: json['email'],
-      address: json['address'],
-      latitude: json['geometry']['lat'],
-      longitude: json['geometry']['lng'],
+      centerName: json['location'] ?? "",
+      location: json['geo'] ?? "",
+      area: json['area'] ?? "",
+      phone: json['phone'] ?? "",
+      email: json['email'] ?? "",
+      address: json['address'] ?? "",
+      latitude: json['geometry']['lat'] ?? 0.0,
+      longitude: json['geometry']['lng'] ?? 0.0,
     );
+  }
+
+  static List<Location> fromJsonList(Map<String, dynamic> json) {
+    if (json['locations'] == null) {
+      return [];
+    }
+    return (json['locations'] as List)
+        .map((locationJson) => Location.fromJson(locationJson))
+        .toList();
   }
 }
