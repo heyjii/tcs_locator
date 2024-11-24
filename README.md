@@ -1,16 +1,18 @@
 # tcs_locator
 
-A new Flutter project.
+A Flutter project.
 
-## Getting Started
+# Screen shots
 
-This project is a starting point for a Flutter application.
+1. Splash screen
 
-A few resources to get you started if this is your first Flutter project:
+![splash_screen](https://github.com/user-attachments/assets/f25b936e-ab8e-4da8-a658-768e7cda0a37)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Location Listing Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![location_listining_screen](https://github.com/user-attachments/assets/1e147a15-d70c-45ed-9ac3-d51fd4008664)
+
+3. Location Detail Screen
+
+![location_detail](https://github.com/user-attachments/assets/e1f52e3a-acad-4a3a-af5f-30ea588d2c16)
+
