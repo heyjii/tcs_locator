@@ -16,3 +16,9 @@ A Flutter project.
 
 ![location_detail](https://github.com/user-attachments/assets/e1f52e3a-acad-4a3a-af5f-30ea588d2c16)
 
+
+# Screen Recording
+
+[tcs_locator_screen_recording.webm](https://github.com/user-attachments/assets/fda4333e-3733-4c08-8772-587ac3a78e57)
+
+
