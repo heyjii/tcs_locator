@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:tcs_locator/models/location_model.dart';
 
 class LocationCard extends StatelessWidget {
-  final String title;
-
-  final String area;
-
-  final String location;
+  final Location location;
 
   const LocationCard(
       {super.key,
-      required this.title,
-      required this.area,
       required this.location});
 
   @override
@@ -18,12 +13,15 @@ class LocationCard extends StatelessWidget {
     return Card(
       elevation: 2,
       child: ListTile(
-        title: Text(title),
-        subtitle: Text('$location - $area'),
+        title: Text(location.centerName),
+        subtitle: Text('${location.location} - ${location.area}'),
         trailing: const Icon(Icons.arrow_forward_ios),
         onTap: () {
-          // Handle tap event
-          debugPrint("Item tapped");
+          Navigator.pushReplacementNamed(
+            context,
+            '/locationDetail',
+            arguments: location.toJson(),
+          );
         },
       ),
     );

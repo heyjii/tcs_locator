@@ -44,10 +44,18 @@ class _LocationListingScreenState extends State<LocationListingScreen> {
               itemCount: state.locations.length,
               itemBuilder: (context, index) {
                 final location = state.locations[index];
-                return LocationCard(
-                    title: location.centerName,
-                    area: location.area,
-                    location: location.location);
+                return ListTile(
+                  title: Text(location.centerName),
+                  subtitle: Text('${location.location} - ${location.area}'),
+                  trailing: const Icon(Icons.arrow_forward_ios),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/locationDetail',
+                      arguments: location.toJson(),
+                    );
+                  },
+                );
               },
             );
           } else if (state is LocationError) {

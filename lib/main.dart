@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tcs_locator/repositories/location_repository.dart';
+import 'package:tcs_locator/screens/location_detail_screen.dart';
 import 'package:tcs_locator/screens/location_listing_screen.dart';
 import 'package:tcs_locator/screens/splash_screen.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
               LocationBloc(LocationRepository()),
           child: const LocationListingScreen(),
         ),
+        '/locationDetail': (context) => const LocationDetailScreen(),
       },
     );
   }
