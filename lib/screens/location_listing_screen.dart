@@ -34,6 +34,31 @@ class _LocationListingScreenState extends State<LocationListingScreen> {
                 Image.asset('assets/images/tcs_logo.png'), // Path to your logo
           ),
         ],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: BlocBuilder<LocationBloc, LocationState>(
+              builder: (context, state) {
+                return TextField(
+                  decoration: InputDecoration(
+                    hintText: "Search locations...",
+                    prefixIcon: const Icon(Icons.search),
+                    suffixIcon: const Icon(Icons.sort),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                  onChanged: (query) {
+                  },
+                );
+              },
+            ),
+          ),
+        ),
       ),
       body: BlocBuilder<LocationBloc, LocationState>(
         builder: (context, state) {

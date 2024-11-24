@@ -14,7 +14,9 @@ class LocationDetailScreen extends StatelessWidget {
     final location = Location.fromJson(locationJson);
 
     return Scaffold(
-      appBar: AppBar(title: Text(location.centerName)),
+      appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Text(location.centerName)),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
